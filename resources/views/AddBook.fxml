@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddBookController">
+   <children>
+      <TextField alignment="CENTER" editable="false" layoutX="214.0" layoutY="14.0" text="SHTO NJË LIBËR" />
+      <TextField fx:id="titleTextField" layoutX="77.0" layoutY="48.0" prefHeight="25.0" prefWidth="445.0" promptText="Titulli" />
+      <TextField fx:id="authorTextField" layoutX="77.0" layoutY="80.0" prefHeight="25.0" prefWidth="445.0" promptText="Autori" />
+      <TextField fx:id="yearTextField" layoutX="77.0" layoutY="112.0" prefHeight="25.0" prefWidth="445.0" promptText="Viti i botimit" />
+      <TextField fx:id="categoryTextField" layoutX="77.0" layoutY="145.0" prefHeight="25.0" prefWidth="445.0" promptText="Kategoria" />
+      <TextField fx:id="bookNumberTextField" layoutX="77.0" layoutY="174.0" prefHeight="25.0" prefWidth="445.0" promptText=" Numri i librit" />
+      <TextField fx:id="shelfNumberTextField" layoutX="77.0" layoutY="206.0" prefHeight="25.0" prefWidth="445.0" promptText=" Numri i raftit" />
+      <TextField fx:id="shelfNameTextField" layoutX="77.0" layoutY="238.0" prefHeight="25.0" prefWidth="445.0" promptText="Pozicioni " />
+      <Button layoutX="101.0" layoutY="309.0" mnemonicParsing="false" onAction="#save" text="Ruaj" />
+      <VBox fx:id="chapterListVBox" layoutX="199.0" layoutY="273.0" prefHeight="595.0" prefWidth="323.0" />
+      <Label layoutX="77.0" layoutY="273.0" />
+      <Button layoutX="77.0" layoutY="277.0" mnemonicParsing="false" onAction="#onAddChapter" text="+ Shto kapitull" />
+      <Label fx:id="success" layoutX="247.0" layoutY="404.0" text="Libri u ruajt me sukses !" textFill="#069d51" visible="false" />
+      <Label fx:id="error" layoutX="260.0" layoutY="395.0" text="Libri nuk u ruajt!" textFill="#c90909" visible="false" />
+      <Button fx:id="backButton" layoutX="101.0" layoutY="348.0" mnemonicParsing="false" onAction="#goBack" text="BACK" />
+   </children>
+</AnchorPane>

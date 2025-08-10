@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SearchBookController">
+   <children>
+      <TextField alignment="CENTER" editable="false" layoutX="259.0" layoutY="14.0" text="KËRKO NJË LIBËR" />
+      <RadioButton fx:id="allRadio" layoutX="19.0" layoutY="54.0" mnemonicParsing="false" text="Shfaq të gjithë librat">
+         <toggleGroup>
+            <ToggleGroup fx:id="searchToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="idRadio" layoutX="19.0" layoutY="96.0" mnemonicParsing="false" text="Kërko sipas id" toggleGroup="$searchToggle" />
+      <RadioButton fx:id="titleRadio" layoutX="19.0" layoutY="166.0" mnemonicParsing="false" text="Kërko sipas titullit" toggleGroup="$searchToggle" />
+      <RadioButton fx:id="authorRadio" layoutX="17.0" layoutY="237.0" mnemonicParsing="false" text="Kërko sipas autorit" toggleGroup="$searchToggle" />
+      <RadioButton fx:id="categoryRadio" layoutX="19.0" layoutY="310.0" mnemonicParsing="false" text="Kërko sipas llojit" toggleGroup="$searchToggle" />
+      <TableView fx:id="booksTable" layoutX="172.0" layoutY="54.0" prefHeight="292.0" prefWidth="473.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="34.0" text="Id" />
+          <TableColumn fx:id="titleColumn" prefWidth="71.33334350585938" text="Titulli" />
+            <TableColumn fx:id="authorColumn" prefWidth="80.00006103515625" text="Autori" />
+            <TableColumn fx:id="yearColumn" prefWidth="42.6666259765625" text="Viti" />
+            <TableColumn fx:id="categoryColumn" prefWidth="56.0" text="Lloji" />
+            <TableColumn fx:id="numberColumn" prefWidth="47.33331298828125" text="Numri" />
+            <TableColumn fx:id="shelfNumberColumn" prefWidth="63.33331298828125" text="Nr.i raftit" />
+            <TableColumn fx:id="positionColumn" minWidth="0.0" prefWidth="75.33331298828125" text="Pozicioni" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idField" layoutX="19.0" layoutY="126.0" prefHeight="25.0" prefWidth="129.0" promptText="Vendosni  id" />
+      <TextField fx:id="titleField" layoutX="19.0" layoutY="194.0" prefHeight="25.0" prefWidth="129.0" promptText="Vendosni titullin" />
+      <TextField fx:id="authorField" layoutX="19.0" layoutY="266.0" prefHeight="25.0" prefWidth="129.0" promptText="Vendosni  autorin" />
+      <TextField fx:id="categoryField" layoutX="19.0" layoutY="333.0" prefHeight="25.0" prefWidth="129.0" promptText="Vendosni  llojin" />
+      <Button fx:id="searchButton" layoutX="47.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleSearch" text="Kërko" />
+      <Button fx:id="backButton" layoutX="383.0" layoutY="361.0" mnemonicParsing="false" onAction="#goBack" text="BACK" />
+   </children>
+</AnchorPane>

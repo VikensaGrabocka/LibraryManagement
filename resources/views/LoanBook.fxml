@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanBookController">
+   <children>
+      <TextField alignment="CENTER" editable="false" layoutX="23.0" layoutY="14.0" text="HUAZO NJË LIBËR" />
+      <TextField fx:id="id" layoutX="23.0" layoutY="56.0" promptText="Id e librit" />
+      <TextField fx:id="name" layoutX="23.0" layoutY="90.0" promptText="Emri i huazuesit" />
+      <TextField fx:id="surname" layoutX="23.0" layoutY="122.0" promptText="Mbiemri i huazuesit" />
+      <Button layoutX="71.0" layoutY="232.0" mnemonicParsing="false" onAction="#save" text="Ruaj" />
+      <Button layoutX="262.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLoans" text="Shiko huazimet" />
+      <TableView fx:id="loanTable" layoutX="190.0" layoutY="47.0" prefHeight="329.0" prefWidth="399.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="26.666656494140625" text="Id" />
+          <TableColumn fx:id="bookIdColumn" prefWidth="61.99993896484375" text="Id e librit" />
+          <TableColumn fx:id="nameColumn" prefWidth="47.33331298828125" text="Emër" />
+            <TableColumn fx:id="surnameColumn" prefWidth="64.0" text="Mbiemër" />
+            <TableColumn fx:id="startColumn" prefWidth="92.666748046875" text="Data e huazimit" />
+            <TableColumn fx:id="returnColumn" prefWidth="103.33331298828125" text="Data e kthimit" />
+        </columns>
+      </TableView>
+      <Button fx:id="updateReturnDateButton" layoutX="379.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleUpdateReturnDate" prefHeight="25.0" prefWidth="149.0" text="Modifiko datën e kthimit" />
+      <Button fx:id="backButton" layoutX="68.0" layoutY="273.0" mnemonicParsing="false" onAction="#goBack" text="BACK" />
+      <DatePicker fx:id="start" layoutX="23.0" layoutY="154.0" prefHeight="25.0" prefWidth="149.0" promptText="Data e fillimit" />
+      <DatePicker fx:id="end" layoutX="23.0" layoutY="187.0" prefHeight="25.0" prefWidth="149.0" promptText="Data e kthimit" />
+   </children>
+</AnchorPane>

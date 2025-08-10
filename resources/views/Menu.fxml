@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
+   <children>
+      <VBox layoutX="121.0" layoutY="14.0" prefHeight="52.0" prefWidth="358.0">
+         <children>
+            <TextField alignment="CENTER" editable="false" prefHeight="21.0" prefWidth="358.0" text="BIBLIOTEKA &quot;GRABOCKA&quot;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <TextField alignment="CENTER" editable="false" layoutX="77.0" layoutY="342.0" prefHeight="25.0" prefWidth="423.0" text="&quot;Mendo para se të flasësh, lexo para se të mendosh. &quot;" />
+      <Button fx:id="aadField" layoutX="233.0" layoutY="76.0" mnemonicParsing="false" onAction="#goToAddView" prefHeight="25.0" prefWidth="111.0" text="SHTO NJË LIBËR" />
+      <Button fx:id="deleteField" layoutX="233.0" layoutY="124.0" mnemonicParsing="false" onAction="#goToDeleteView" prefHeight="25.0" prefWidth="111.0" text="FSHI NJË LIBËR" />
+      <Button fx:id="loanField" layoutX="233.0" layoutY="174.0" mnemonicParsing="false" onAction="#goToLoanView" prefHeight="25.0" prefWidth="111.0" text="HUAZO NJË LIBËR" />
+      <Button fx:id="searchField" layoutX="233.0" layoutY="222.0" mnemonicParsing="false" onAction="#goToSearchView" prefHeight="25.0" prefWidth="111.0" text="KËRKO NJË LIBËR" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChaptersPopupController">
+   <children>
+      <TableView fx:id="chaptersTable" layoutX="226.0" layoutY="52.0" prefHeight="309.0" prefWidth="150.0">
+        <columns>
+          <TableColumn fx:id="chapterIdColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="chapterColumn" prefWidth="75.0" text="Kapitulli" />
+        </columns>
+      </TableView>
+      <TextField alignment="CENTER" editable="false" layoutX="226.0" layoutY="14.0" text="KAPITUJT" />
+   </children>
+</AnchorPane>

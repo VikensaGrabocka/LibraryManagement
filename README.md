@@ -1,4 +1,5 @@
 **Library Management System**
+
 This project consists of a user-friendly library management system.
 It is built using Java, Java FX and an embedded database. 
 
